@@ -1,4 +1,4 @@
-# Checkpoint #2
+# Checkpoint #1
 
  - Build on the Terraform code
  - Replace hard coded values with variables, things like names, skus, locations, etc.
