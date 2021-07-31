@@ -5,6 +5,10 @@ Lets add a load balancer to the project. Even though we only have a single VM, w
 # Objective
 
  - Create a load balancer module
+ - Create frontend public IP
+ - Create LB rule for your web app
+ - create health probe for your web service
+ - make sure your NSG is configured correctly for the health probe AND web traffic...
  - Add your web server as a backend pool
  - Test access to your nginx page using the load balancer
 
