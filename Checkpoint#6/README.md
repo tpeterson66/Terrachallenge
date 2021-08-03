@@ -1,4 +1,4 @@
-# Checkpoint #5
+# Checkpoint #6
 
 Now that we have a load balancer... Lets add a second web server. Create a module for your web server and create a module for an availability set as well. Use the module to create 2 machines using the count operator vs. copying-pasting the machine config twice.
 
