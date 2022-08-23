@@ -42,7 +42,7 @@ This project will continue to build upon itself. This is the beginning to make s
 
 ## Variables
 
-Variables are important in TF allowing the code to dynmaic based on the requirements of the environment. There are multiple ways to pass vairables to Terraform for use within your project. Lets confirm a few ways of using variables.
+Variables are important in TF allowing the code to dynmaic based on the requirements of the environment. There are multiple ways to pass vairables to Terraform for use within your project. Lets confirm a few ways of using variables. Spend the time to become fimilar with the different types of variables including lists, maps, strings, numbers, etc. Truly understand where each of these variables can be used and how to structure variables correctly. Make sure you understand when and where different variable types should be used, Ie, command line, tfvars, auto.tfvars, or inline.
 
 > Provide examples of the following variable usage
 * Provide a variable in code and use the default value option. This can be used for the location.
@@ -61,3 +61,15 @@ This full deployment will require some additional resources which will be used t
 * Key vault - used to store the virtual machine password
 
 > Deploy the required resources to get a simple web sever working behind a load balancers. If you're deploying ubuntu, you can use `sudo apt-get update && sudo apt-get upgrade -y && sudo apt-get install nginx -y` to install nginx which will provide a simple website which can be used for testing. The end result would be that when you hit the standard load balancer, you're able to access the website. Commit this to your github using a commit message of "full deployment".
+
+## Using count and other functions
+
+Much like other programming and scripting languages, Terraform provides functions which can be used to augment the code and make it more dynamic. This section will require you to dig in and find use-cases for some of these functions.
+
+> Use a number variable to dynamicly create x number of virtual machines. For example, set the variable equal to 2 and you should end up with two virtual machines. Update the variable to 3 and make sure you have 3 virtual machines. This should include all the additional confguration required including adding the VMs to the LB backend pool. When complete, commit your code using "count".
+
+## Looping
+
+Sometimes, rather than count, you will need to use a loop of for_each statement. These can be used to pass additional information and also can be used in resources which do not currently support their own resource. 
+
+> Create a variable that is a list of objects which will become your new virtual machine list. Provide some additional information in this list to change the sku of some vms. For example, provide the information to create two VMs, one VM should use a b-series sku and the other should use a d-series sku. The end result is that you have two web server VMs created for the list of objects variable.
