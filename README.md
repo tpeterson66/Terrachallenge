@@ -73,3 +73,9 @@ Much like other programming and scripting languages, Terraform provides function
 Sometimes, rather than count, you will need to use a loop of for_each statement. These can be used to pass additional information and also can be used in resources which do not currently support their own resource. 
 
 > Create a variable that is a list of objects which will become your new virtual machine list. Provide some additional information in this list to change the sku of some vms. For example, provide the information to create two VMs, one VM should use a b-series sku and the other should use a d-series sku. The end result is that you have two web server VMs created for the list of objects variable.
+
+## Modules
+
+Modules are very important in Terraform code. Essentially, a module is a small collection of resources. Simply put, a module could be created for the virtual machine allowing subsequent VMs to be configured the same as other VMs. This VM module may contain the virutal machine, the network interface, any required disks, monitoring details, etc. to properlly configure a VM for this project.
+
+> Create two modules which can be re-used during the entire project. Create a module for the resource group and the virtual machine. Move all the resources associated with each to their respective module and then use module calls to deploy those resources. Make sure you using variables in your modules to pass parameters to the module dynamically. The end result is that everything is deployed and working with your module calls vs. hard coded resources in the code.
